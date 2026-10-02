@@ -1,0 +1,6 @@
+/* siswa-form.css - tambah dan edit siswa */
+.form-card { max-width: 720px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+.form-actions { display: flex; gap: 10px; margin-top: 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,21 @@
+/* siswa-show.css - detail siswa, tagihan, dan pencatatan pembayaran */
+.profile-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 18px; }
+.profile-head h2 { font-size: 1.4rem; }
+.profile-actions { display: flex; gap: 8px; }
+
+.profile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px 24px; }
+.profile-grid dt { font-size: .82rem; color: var(--muted); }
+.profile-grid dd { font-weight: 600; }
+
+.pay-form { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pay-form input[type="number"] { width: 130px; padding: 5px 8px; }
+.pay-form select { width: 100px; padding: 5px 8px; }
+
+@media (max-width: 700px) {
+    .profile-head { flex-direction: column; }
+    .profile-actions { flex-wrap: wrap; }
+    .table-stack td.pay-cell { flex-direction: column; align-items: stretch; }
+    .pay-cell::before { margin-bottom: 4px; }
+    .pay-form { width: 100%; }
+    .pay-form input[type="number"], .pay-form select, .pay-form .btn { width: 100%; }
+}

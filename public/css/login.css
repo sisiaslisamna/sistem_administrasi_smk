@@ -1,0 +1,148 @@
+/*====================
+Tampilan Halaman Login
+======================*/
+
+/*Mengambil Font Inter*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/*Background Kartu*/
+body.page-login {
+    display: block;
+    min-height: 100vh;
+    /*background-color: #0C3BBE;*/
+    background: linear-gradient(180deg, #0C3BBE 0%, #00ced1 100%);
+    background-attachment: fixed;
+    font-family: 'Inter';
+}
+
+.page-login .content {
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+/*Kartu*/
+.login-card {
+    width: min(430px, 92vw);
+    background: #fafafa;
+    border-radius: 20px;
+    padding: 40px 30px 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: all;
+    animation: slideUp 2.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/*Keyframe Animasi slideUp*/
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /*Posisi awal keyframe card berada di bawah 50px dari posisi:*/
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /*Posisi akhir keyframe card kembali ke posisi semula*/
+    }
+}
+
+.login-logo {
+    display: block;
+    width: 80px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+.login-field {margin-bottom: 20px;}
+
+/* Pengaturan Teks Label "Username" & "Password" */
+.login-field label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+/*Tombol Input Nama Pengguna dan Kata Sandi*/
+.login-field input {
+    width: 100%;
+    height: 40px;
+    padding: 0 25px;
+    border: 1px solid #1a1a1a;
+    border-radius: 999px;
+    background: #dadada;
+    color: #1a1a1a;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.login-field input::placeholder { color: #5a5a5a; }
+
+/*outline border tombol saat di klik*/
+.login-field input:focus {
+    outline: none;
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 1px #1a1a1a;
+}
+
+/*Tombol Login*/
+.login-button {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-top: 30px;
+    border: 2px solid #1a1a1a;
+    border-radius: 999px;
+    background: #F3C010;
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background: #1a1a1a;
+    color: #fafafa;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 11px;
+    color: #1a1a1a;
+}
+
+/*Notifikasi Pesan Error*/
+.login-error {
+    margin: 5px 0 0;
+    padding: 7px 15px;
+    border-radius: 10px;
+    background: #ffe6e6;
+    color: #d93025;
+    font-size: 11px;
+    text-align: center;
+}
+
+/*sembunyikan notifikasi error umum di bagian atas halaman login,
+yang dimana pesan error ini digunakan di semua halaman*/
+.page-login .content > .alert-err {
+    display: none;
+}
+
+/*Responsif Device HP*/
+@media (max-width: 480px) {
+    .login-card { padding: 40px 25px 40px; border-radius: 15px; }
+    .login-title { font-size: 1.15rem; margin-bottom: 22px; }
+}

@@ -1,0 +1,16 @@
+/* dashboard.css - halaman dashboard */
+.dash-ta { margin-bottom: 14px; color: var(--muted); }
+
+.dash-cards { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.dash-cards .card { margin-bottom: 0; }
+
+.dash-label { font-size: .88rem; color: var(--muted); }
+.dash-figure { font-size: 1.9rem; font-weight: 700; line-height: 1.15; margin: 6px 0 12px; }
+.dash-ok { color: var(--ok); }
+
+@media (max-width: 860px) {
+    .dash-cards { grid-template-columns: 1fr; }
+}
+
+.dash-spp { margin-bottom: 16px; }
+.dash-ok { color: var(--ok); }

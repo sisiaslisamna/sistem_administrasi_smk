@@ -1,0 +1,25 @@
+/* spp.css - Data SPP dan kwitansi */
+.spp-filters { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 10px; }
+.result-count { color: var(--muted); font-size: .9rem; margin-bottom: 12px; }
+td.name { font-weight: 600; }
+
+.spp-table th, .spp-table td { white-space: nowrap; }
+.spp-table .cell { text-align: center; }
+
+.bulan-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 8px; margin: 14px 0; }
+.bulan-item { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius); }
+.bulan-item.is-lunas { background: var(--ok-bg); }
+.kw-preview { margin: 12px 0; font-size: 1.05rem; }
+
+.kw-head { display: flex; justify-content: space-between; gap: 16px; border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 16px; }
+.kw-nomor { text-align: right; font-weight: 600; }
+.kw-total td { font-weight: 700; border-top: 2px solid var(--ink); }
+.kw-actions { display: flex; gap: 8px; margin-top: 12px; }
+
+@media (max-width: 900px) { .spp-filters { grid-template-columns: 1fr; } }
+
+@media print {
+    .sidebar, .sidebar-backdrop, .menu-toggle, .topbar, .no-print, .alert { display: none !important; }
+    .content { margin: 0 !important; padding: 0 !important; }
+    .card { box-shadow: none; border: 0; }
+}
